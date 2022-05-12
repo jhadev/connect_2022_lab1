@@ -49,6 +49,7 @@ const ImageCard: FC<{ image: Image }> = ({
 };
 
 export const ImageGrid: FC = () => {
+
   const { data, error } = useSWR<{ images: Image[] }>("/api/images");
 
   if (error || data === undefined) {
@@ -60,8 +61,6 @@ export const ImageGrid: FC = () => {
     );
 
   }
-  };
-
 
 
   return (
